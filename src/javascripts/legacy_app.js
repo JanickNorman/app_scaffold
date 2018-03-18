@@ -29,6 +29,14 @@ var App = {
 
   logClosedApp() {
     console.log("About to close the app.");
+  },
+
+  showError() {
+    this.switchTo("error");
+  }
+
+  showErrorNotFound() {
+    this.switchTo("error_not_found");
   }
 };
 

@@ -1,0 +1,30 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
+  <script type="text/javascript">
+    var modalhtml;
+    let modalClient = ZAFClient.init();
+    modalClient.invoke('resize', { width: '40vw', height: '40vh' });
+  </script>
+  <meta charset="utf-8">
+</head>
+<body>
+  <div id="main-modal">
+    loading...
+  </div>
+  <script>
+    modalClient.on("show_modal", function(html) {
+      console.log(html);
+
+      document.getElementById("main-modal").innerHTML = html
+    });
+  </script>
+  <link rel="stylesheet" href="https://assets.zendesk.com/apps/sdk-assets/css/2/zendesk_garden.css" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ </body>
+ </html>
