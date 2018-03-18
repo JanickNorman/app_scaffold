@@ -19,8 +19,7 @@ var App = {
   },
 
   async init() {
-    const data = await this.ajax("getMe");
-    this.renderMain(data);
+
   },
 
   renderMain({ user }) {
@@ -33,7 +32,7 @@ var App = {
 
   showError() {
     this.switchTo("error");
-  }
+  },
 
   showErrorNotFound() {
     this.switchTo("error_not_found");
